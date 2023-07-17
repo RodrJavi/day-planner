@@ -15,9 +15,9 @@ $(function () {
         .val(localStorage.getItem($(this).data("hour")));
     }
     // Determines color of div based on hour of the day
-    if ($(this).data("hour") > dayjs().hour()) {
+    if ($(this).data("hour") > 13) {
       $(this).children().addClass("future");
-    } else if ($(this).data("hour") < dayjs().hour()) {
+    } else if ($(this).data("hour") < 13) {
       $(this).children().addClass("past");
     } else {
       $(this).children().addClass("present");
